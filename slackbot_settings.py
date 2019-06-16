@@ -1,10 +1,14 @@
 # coding: utf-8
 
-# botアカウントのトークンを指定。ここを変える！
-API_TOKEN = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+with open("TOKEN.text") as f:
+    TOKEN = f.read()
 
-# bot宛メッセージの例外対応
+# botアカウントのトークンを指定
+API_TOKEN = TOKEN
+
+# このbot宛のメッセージで、どの応答にも当てはまらない場合の応答文字列
 DEFAULT_REPLY = "HELLO, SOMETHING WRONG"
 
-# プラグイン。この中に呼びかけた後の反応などを書く
+# プラグインスクリプトを置いてあるサブディレクトリ名のリスト
 PLUGINS = ['plugins']
+
